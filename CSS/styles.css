@@ -12,9 +12,7 @@ body {
 
 div.card.main {
   border: thick double #ceeffd;
-
   margin: 70px auto;
-
   box-shadow: 0 0.5rem 1rem rgba(37, 37, 37, 0.15);
   background-color: rgb(254, 254, 254);
   max-width: 960px;
@@ -32,7 +30,6 @@ div.card.right {
   padding: 10px 15px;
   border: 0;
   border-left: 0 0.5rem 1rem rgba(37, 37, 37, 0.15);
-
   background-color: transparent;
 }
 li {
@@ -56,7 +53,6 @@ p.footer {
   text-align: center;
   font-size: 15px;
 }
-
 .weather-icon {
   font-size: 36px;
 }
@@ -72,7 +68,6 @@ p.footer {
   --bs-btn-hover-bg: transparent;
   --bs-btn-hover-color: #2fa7df;
 }
-
 .btn-primary:hover {
   background-color: #2fa7df;
   color: #cfecf9;
