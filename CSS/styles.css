@@ -1,0 +1,126 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat&display=swap");
+body {
+  font-family: "Montserrat", sans-serif;
+  color: #222222;
+  font-size: 100%;
+  background: radial-gradient(
+    circle at 10% 20%,
+    rgb(239, 246, 249) 0%,
+    rgb(206, 239, 253) 90%
+  );
+}
+
+div.card.main {
+  border: thick double #ceeffd;
+
+  margin: 70px auto;
+
+  box-shadow: 0 0.5rem 1rem rgba(37, 37, 37, 0.15);
+  background-color: rgb(254, 254, 254);
+  max-width: 960px;
+  text-align: center;
+}
+.form-label {
+  margin: 10px 0 0;
+}
+div.card.left {
+  padding: 10px 15px;
+  border: 0;
+  background-color: transparent;
+}
+div.card.right {
+  padding: 10px 15px;
+  border: 0;
+  border-left: 0 0.5rem 1rem rgba(37, 37, 37, 0.15);
+
+  background-color: transparent;
+}
+li {
+  list-style: none;
+  font-size: 15px;
+}
+i.icon {
+  text-align: center;
+  display: inline-block;
+  padding: 10px 0;
+  font-size: 22px;
+}
+
+div.card.dashboard {
+  border: 0;
+  text-align: center;
+  max-width: 90px;
+  background-color: transparent;
+}
+p.footer {
+  text-align: center;
+  font-size: 15px;
+}
+
+.weather-icon {
+  font-size: 36px;
+}
+.serch {
+  display: inline-block;
+  padding: 1px 0 10px;
+}
+.btn-primary {
+  background-color: transparent;
+  border: 1px solid #2fa7df;
+  color: #2fa7df;
+  border-radius: 3px;
+  --bs-btn-hover-bg: transparent;
+  --bs-btn-hover-color: #2fa7df;
+}
+
+.btn-primary:hover {
+  background-color: #2fa7df;
+  color: #cfecf9;
+  transition: all 300ms ease-in-out;
+}
+.celsius {
+  font-weight: 900;
+}
+.fahrenheit {
+  font-weight: 900;
+}
+.change {
+  color: #2fa7df;
+}
+.change:hover {
+  cursor: pointer;
+  text-decoration: underline;
+}
+.max-temp {
+  font-weight: bolder;
+}
+.min-temp {
+  font-weight: bolder;
+  opacity: 0.7;
+}
+.card-body:hover {
+  cursor: pointer;
+}
+.bg {
+  background-color: rgba(94, 212, 241, 0.2);
+  border-radius: 3px;
+  transition: all 300ms ease-in-out;
+}
+
+[class*="2"] {
+  background-color: rgba(94, 212, 241, 0.2);
+  border-radius: 3px;
+  transition: all 300ms ease-in-out;
+}
+[id*="2"] > i,
+span.max-temp,
+span.min-temp,
+[id*="3"] > i,
+[id*="4"] > i,
+[id*="5"] > i {
+  pointer-events: none;
+}
+
+.cloud {
+  font-size: 21px;
+}
