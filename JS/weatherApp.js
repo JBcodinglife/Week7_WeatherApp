@@ -139,6 +139,7 @@ function convertToFahrenheit() {
   tempCelsius.classList.add("change");
   tempFahrinheit.classList.remove("change");
   snowWind.innerHTML = `${Math.round(windSpeedUnit * 0.62137)} ${weatherUnit}`;
+  private();
 }
 
 //Current date
@@ -225,24 +226,31 @@ let dailyForecastSelector = document.querySelector("#daily-forecast");
 let searchForm = document.querySelector("#search-line");
 let forecastButton = document.getElementsByClassName("col");
 
+// Private Feature
+
+let varOne = null;
+let varTwo = null;
+let varThree = null;
+
 //Weather forecast buttons
 
 document.addEventListener("click", function (e) {
   if (e.target && e.target.id == "2") {
     tempCurrent = tempInfo[0].temp.max;
-    console.log(maxTemp[0].innerHTML);
-    snowHumidity.innerHTML = tempInfo[0].humidity;
-    snowPessure.innerHTML = tempInfo[0].pressure;
-    snowWind.innerHTML = `${Math.round(windOneF)} ${weatherUnit}`;
-    snowTemp.innerHTML = maxTemp[0].innerHTML;
-    snowWeatherIcon.innerHTML =
+    showHumidity.innerHTML = tempInfo[0].humidity;
+    showPessure.innerHTML = tempInfo[0].pressure;
+    showWind.innerHTML = `${Math.round(windOneF)} ${weatherUnit}`;
+    showTemp.innerHTML = maxTemp[0].innerHTML;
+    showWeatherIcon.innerHTML =
       weatherIconForecast[tempInfo[0].weather[0].main];
-    snowWeather.innerHTML = tempInfo[0].weather[0].main;
+    showWeather.innerHTML = tempInfo[0].weather[0].main;
 
     document.getElementById("2").classList.add("bg");
     document.getElementById("3").classList.remove("bg");
     document.getElementById("4").classList.remove("bg");
     document.getElementById("5").classList.remove("bg");
+    varOne += 3;
+    varTwo += 3;
   }
 });
 
@@ -261,6 +269,7 @@ document.addEventListener("click", function (e) {
     document.getElementById("2").classList.remove("bg");
     document.getElementById("4").classList.remove("bg");
     document.getElementById("5").classList.remove("bg");
+    varTwo = 3;
   }
 });
 
@@ -280,6 +289,8 @@ document.addEventListener("click", function (e) {
     document.getElementById("3").classList.remove("bg");
     document.getElementById("2").classList.remove("bg");
     document.getElementById("5").classList.remove("bg");
+    varTwo = 15;
+    varOne = 20;
   }
 });
 
@@ -299,6 +310,7 @@ document.addEventListener("click", function (e) {
     document.getElementById("3").classList.remove("bg");
     document.getElementById("2").classList.remove("bg");
     document.getElementById("4").classList.remove("bg");
+    varOne = 5;
   }
 });
 
@@ -315,5 +327,12 @@ tempCelsius.addEventListener("click", convertToCelsius);
 tempFahrinheit.addEventListener("click", convertToFahrenheit);
 
 //Launch of the main function
+
+function private() {
+  if (varOne === 11 && varTwo === 6) {
+    document.querySelector("body").classList.add("private");
+    document.querySelector(".main").classList.add("private");
+  }
+}
 
 initialData("Kyiv");
