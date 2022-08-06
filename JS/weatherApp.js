@@ -70,6 +70,7 @@ function initialData(cityInfo) {
     snowHumidity.innerHTML = humidity;
     snowTemp.innerHTML = `${tempRound}º`;
     snowCity.innerHTML = city;
+    convertToCelsius();
   }
   function cityValue(event) {
     event.preventDefault();
